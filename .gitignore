@@ -1,0 +1,57 @@
+Linux/Sentience_Pitch_Deck.pptx
+Linux/Sentience_Project_Specification.md
+
+# Python environments
+.venv/
+venv/
+env/
+
+# Python cache and build files
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Test, coverage, lint, and type-checker files
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.mypy_cache/
+.pyright/
+.ruff_cache/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets/
+credentials/
+
+# Local application data
+*.db
+*.sqlite
+*.sqlite3
+providers.json
+connectors.json
+config.local.*
+
+# Logs and runtime files
+*.log
+*.pid
+*.sock
+runtime/
+logs/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sentience"
+version = "1.0.0"
+description = "Privacy-First Personal AI Agent for the Computer"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "pydantic>=2.9.0",
+    "pydantic-settings>=2.5.0",
+    "watchdog>=5.0.0",
+    "psutil>=6.0.0",
+    "GitPython>=3.1.0",
+    "typer>=0.12.0",
+    "rich>=13.0.0",
+    "python-docx>=1.2.0",
+    "PyYAML>=6.0.3",
+    "prompt_toolkit>=3.0.0",
+    "fastapi>=0.111.0",
+    "uvicorn>=0.30.0",
+    "PyMuPDF>=1.24.0",
+    "reportlab>=4.2.0",
+    "rapidocr>=3.10.0",
+    "onnxruntime>=1.31.0",
+    "keyring>=25.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+]
+
+[project.scripts]
+sentience = "cli.entrypoint:main"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["src"]
+sources = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
