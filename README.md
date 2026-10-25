@@ -110,7 +110,8 @@ After starting Sentience:
 4. Review privacy behavior with `sentinel`.
 5. Add approved workspaces with `archive`.
 6. Start an AI session with `agent`.
-7. Inspect file history with `argus` and window activity with `window`.
+7. Change Different Sentience Settings with `Settings`.
+8. Inspect file history with `argus` and window activity with `window`.
 
 Cloud models and external connectors are optional. Sensitive data should be tested with synthetic values before enabling cloud routes.
 
