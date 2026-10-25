@@ -4,6 +4,8 @@ Sentience is a privacy-first personal AI agent for your computer. It is a termin
 
 Sentience is designed to keep the user in control. Local files, activity history, credentials, model choices, and external actions are governed by explicit permissions and Sentinel privacy policies.
 
+**Website:** [nkc-gh.github.io/Sentience](https://nkc-gh.github.io/Sentience/)
+
 ## Features
 
 - Interactive `sentience >` terminal shell.
