@@ -165,9 +165,15 @@ def _cosine(left: list[float], right: list[float]) -> float:
     return dot / (left_norm * right_norm) if left_norm and right_norm else -1.0
 
 
-def retrieve_context(db: Any, providers: Any, chat_id: int, query: str, limit: int = 5) -> str:
+def retrieve_context(
+    db: Any, providers: Any, chat_id: int, query: str, limit: int = 5,
+    allowed_paths: set[str] | None = None,
+) -> str:
     """Retrieve top passages, embedding the query with each indexed model."""
     chunks = db.get_chat_document_chunks(chat_id)
+    if allowed_paths is not None:
+        allowed = {str(Path(path).expanduser().resolve()) for path in allowed_paths}
+        chunks = [chunk for chunk in chunks if str(Path(chunk["source_path"]).expanduser().resolve()) in allowed]
     if not chunks:
         return ""
     allowed = {model.id: model for model in providers.get_models_for_task("embedding")}

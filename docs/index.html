@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sentience is a privacy-first personal AI agent for your computer." />
+  <title>Sentience — Personal AI for your computer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Sentience home">
+      <span class="brand-symbol">◈</span>
+      <span class="brand-name">SENTIENCE</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#what-is">What it is</a>
+      <a href="#features">Features</a>
+      <a href="#install">Install</a>
+    </nav>
+    <div class="header-actions">
+      <a class="github-link" href="https://github.com/nkc-gh/Sentience" target="_blank" rel="noreferrer">
+        <svg class="github-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.3 11.3 0 0 0-3.58 22c.57.1.78-.25.78-.55v-2.1c-3.17.69-3.84-1.34-3.84-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.72-1.54-2.53-.29-5.18-1.27-5.18-5.65 0-1.25.45-2.26 1.18-3.06-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.12 1.17a10.86 10.86 0 0 1 5.68 0c2.16-1.48 3.12-1.17 3.12-1.17.62 1.57.23 2.73.11 3.02.73.8 1.18 1.81 1.18 3.06 0 4.39-2.66 5.36-5.2 5.64.41.36.77 1.07.77 2.16v3.2c0 .3.2.66.79.55A11.3 11.3 0 0 0 12 .7Z"/></svg>
+        <span>GitHub</span>
+      </a>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+        <span class="theme-glyph" aria-hidden="true">☼</span>
+        <span class="theme-label">Light</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero page-width">
+      <div class="hero-main">
+        <p class="kicker"><span class="live-dot"></span> Local-first personal AI</p>
+        <h1>Remember Everything.<br /><em>Control What Matters.</em></h1>
+        <p class="hero-lede">Sentience is a local-first AI assistant for the work already on your computer—aware of the context you choose, with its boundaries kept visible.</p>
+        <div class="hero-meta">
+          <span>Open source project</span><span class="meta-separator">/</span><span>Linux + Windows</span><span class="meta-separator">/</span><span>Terminal-native</span>
+        </div>
+      </div>
+      <div class="hero-console" aria-label="Sentience terminal preview">
+        <div class="console-top"><span class="console-dots"><i></i><i></i><i></i></span><span>sentience / agent</span><span class="console-live">● online</span></div>
+        <div class="console-content">
+          <div class="console-line"><span class="prompt-muted">sentience</span> <b>&gt;</b> agent</div>
+          <div class="console-divider"></div>
+          <div class="console-title">Sentience <span>· Agent</span></div>
+          <div class="console-row"><label>Model</label><strong>Ollama</strong><span>local-model</span></div>
+          <div class="console-row"><label>Workspace</label><strong class="blue">~/Projects</strong></div>
+          <div class="console-row"><label>Sentinel</label><strong class="green">Hybrid protection</strong></div>
+          <div class="console-question"><span>You</span> summarize the recent changes in my project</div>
+          <div class="console-answer"><span class="green">●</span> Reading only the workspace you allowed...</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="install-bar page-width" id="install" aria-labelledby="install-title">
+      <div class="install-heading">
+        <p class="section-index">00 / Install first</p>
+        <h2 id="install-title">Get Sentience<br /><span>on your machine.</span></h2>
+        <p class="install-copy">The installer sets up an isolated environment, the required dependencies, and the <code>sentience</code> launcher.</p>
+        <a class="install-github" href="https://github.com/nkc-gh/Sentience" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.3 11.3 0 0 0-3.58 22c.57.1.78-.25.78-.55v-2.1c-3.17.69-3.84-1.34-3.84-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.72-1.54-2.53-.29-5.18-1.27-5.18-5.65 0-1.25.45-2.26 1.18-3.06-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.12 1.17a10.86 10.86 0 0 1 5.68 0c2.16-1.48 3.12-1.17 3.12-1.17.62 1.57.23 2.73.11 3.02.73.8 1.18 1.81 1.18 3.06 0 4.39-2.66 5.36-5.2 5.64.41.36.77 1.07.77 2.16v3.2c0 .3.2.66.79.55A11.3 11.3 0 0 0 12 .7Z"/></svg>
+          View Sentience on GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="install-console">
+        <div class="platform-switch" role="tablist" aria-label="Choose your operating system">
+          <button class="platform-tab active" id="linux-tab" type="button" role="tab" aria-selected="true" data-platform="linux">
+            <svg class="tux-icon" viewBox="0 0 64 72" aria-hidden="true"><path class="tux-body" d="M32 2C18 2 13 16 14 30c.4 5-2 9-6 15C3 53 7 65 18 67c6 1 10-2 14-2s8 3 14 2c11-2 15-14 10-22-4-6-6-10-6-15C51 16 46 2 32 2Z"/><path class="tux-belly" d="M32 29c-10 0-15 8-15 19 0 10 5 15 15 15s15-5 15-15c0-11-5-19-15-19Z"/><path class="tux-face" d="M19 21c0-7 5-12 13-12s13 5 13 12c0 6-5 10-13 10s-13-4-13-10Z"/><circle class="tux-eye" cx="26" cy="20" r="2"/><circle class="tux-eye" cx="38" cy="20" r="2"/><path class="tux-beak" d="m27 25 5-2 5 2-5 4-5-4Z"/><path class="tux-feet" d="M15 62c-5 1-8 3-8 6 0 2 9 3 18 1l2-3-12-4Zm34 0c5 1 8 3 8 6 0 2-9 3-18 1l-2-3 12-4Z"/></svg>
+            Linux
+          </button>
+          <button class="platform-tab" id="windows-tab" type="button" role="tab" aria-selected="false" data-platform="windows">
+            <svg class="windows-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 5.1 8-1.1v7.4H3V5.1Zm9.2-1.3L21 2.6v8.8h-8.8V3.8ZM3 12.6h8v7.4l-8-1.1v-6.3Zm9.2 0H21v8.8l-8.8-1.2v-7.6Z"/></svg>
+            Windows
+          </button>
+          <span class="platform-requirement">64-bit Python 3.13 · Git</span>
+        </div>
+        <div class="command-row install-command-row">
+          <span class="command-prompt" aria-hidden="true">$</span>
+          <code id="install-command">curl -fsSL https://raw.githubusercontent.com/nkc-gh/Sentience/main/Linux/install.sh | bash</code>
+          <button class="copy-button" type="button">Copy command</button>
+        </div>
+        <div class="install-next"><span>THEN RUN</span><code id="launch-command">sentience</code><span class="install-note">The installer creates an isolated environment and adds the launcher.</span></div>
+      </div>
+    </section>
+
+    <section class="what-is page-width" id="what-is">
+      <div class="section-intro">
+        <p class="section-index">01 / What is Sentience?</p>
+        <h2>Not another chatbot.<br /><span>A working memory for your computer.</span></h2>
+      </div>
+      <div class="what-copy">
+        <p>Sentience brings AI chat, local computer awareness, file history, model routing, memory, and privacy controls into one terminal-first workspace.</p>
+        <p class="muted">Ask about the project in front of you, inspect what changed, or attach documents deliberately. It works with the context you permit.</p>
+        <div class="what-signals" aria-label="Sentience principles"><span>Local-first</span><span>Permission scoped</span><span>Terminal-native</span></div>
+      </div>
+    </section>
+
+    <section class="features page-width" id="features" aria-labelledby="features-title">
+      <div class="section-intro section-intro-wide">
+        <p class="section-index">02 / The system</p>
+        <h2 id="features-title">One assistant.<br /><span>Six useful instincts.</span></h2>
+        <p class="muted intro-side-note">Choose a capability to see how it works in practice.</p>
+      </div>
+      <div class="feature-layout">
+        <div class="feature-list" role="tablist" aria-label="Sentience features">
+          <button class="feature-tab active" type="button" role="tab" aria-selected="true" data-feature="chat"><span>01</span><strong>Agent chat</strong><b>↗</b></button>
+          <button class="feature-tab" type="button" role="tab" aria-selected="false" data-feature="memory"><span>02</span><strong>Memory &amp; documents</strong><b>↗</b></button>
+          <button class="feature-tab" type="button" role="tab" aria-selected="false" data-feature="argus"><span>03</span><strong>Argus file history</strong><b>↗</b></button>
+          <button class="feature-tab" type="button" role="tab" aria-selected="false" data-feature="sentinel"><span>04</span><strong>Sentinel privacy</strong><b>↗</b></button>
+          <button class="feature-tab" type="button" role="tab" aria-selected="false" data-feature="routing"><span>05</span><strong>Model routing</strong><b>↗</b></button>
+          <button class="feature-tab" type="button" role="tab" aria-selected="false" data-feature="connectors"><span>06</span><strong>Skills &amp; connectors</strong><b>↗</b></button>
+        </div>
+        <article class="feature-detail" id="feature-detail" aria-live="polite">
+          <div class="detail-top"><span class="detail-index">01</span><span class="detail-tag">CORE EXPERIENCE</span></div>
+          <h3>Agent chat</h3>
+          <p class="detail-lede">A focused conversation layer that can work with the context you choose—not a blank chat window pretending it knows your computer.</p>
+          <p class="detail-body">Start or resume conversations, switch between chat, reasoning, and code modes, add approved files, and let assigned models work through scoped tools. Provider responses, token usage, context limits, and local sources stay visible in the chat.</p>
+          <div class="detail-points"><span>Multiple provider APIs</span><span>Scoped file tools</span><span>Conversation history</span></div>
+          <div class="detail-command"><span>Try it</span><code>sentience &gt; agent</code></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="media-section page-width" aria-labelledby="media-title">
+      <div class="section-intro section-intro-wide">
+        <p class="section-index">03 / See it</p>
+        <h2 id="media-title">The interface is quiet.<br /><span>The context is not.</span></h2>
+      </div>
+      <div class="media-stack">
+        <figure class="media-frame screenshot-frame" tabindex="0"><span class="media-label">SCREENSHOT 01</span><img src="assets/1.png" alt="Sentience Linux terminal interface" loading="lazy" /><figcaption>Sentience terminal interface</figcaption></figure>
+        <figure class="media-frame screenshot-frame" tabindex="0"><span class="media-label">SCREENSHOT 02</span><img src="assets/2.png" alt="Sentience Agent chat showing local data access controls" loading="lazy" /><figcaption>Agent chat and local data controls</figcaption></figure>
+        <figure class="media-frame screenshot-frame" tabindex="0"><span class="media-label">SCREENSHOT 03</span><img src="assets/3.png" alt="Sentience model and provider management screen" loading="lazy" /><figcaption>Model and provider management</figcaption></figure>
+        <figure class="media-frame video-frame" tabindex="0"><span class="media-label">DEMO VIDEO</span><video controls preload="metadata" playsinline aria-label="Sentience product demonstration"><source src="assets/Sentience%20Demo%20(Audio%20%2B%20Video).mp4" type="video/mp4" />Your browser does not support MP4 video.</video><figcaption>A short walk through Sentience</figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <div class="media-viewer" id="media-viewer" aria-hidden="true">
+    <div class="media-viewer-backdrop" aria-hidden="true"></div>
+    <div class="media-viewer-card" role="dialog" aria-modal="true" aria-label="Expanded media preview">
+      <button class="media-viewer-close" type="button" aria-label="Close expanded media">×</button>
+      <div class="media-viewer-content" id="media-viewer-content"></div>
+      <p class="media-viewer-caption" id="media-viewer-caption"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer page-width">
+    <a class="brand" href="#top"><span class="brand-symbol">◈</span><span class="brand-name">SENTIENCE</span></a>
+    <div class="footer-middle">Remember Everything. Control What Matters.</div>
+    <div class="footer-end"><a href="https://github.com/nkc-gh/Sentience" target="_blank" rel="noreferrer">GitHub ↗</a><span>Made by Team WC</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

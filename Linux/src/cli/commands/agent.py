@@ -669,11 +669,11 @@ def _change_chat_workspace(shell, chat) -> bool:
 def _disable_local_sources(shell, chat: Chat) -> None:
     shell.db.set_chat_local_sources(chat.id, [])
     chat.enabled_local_sources = []
-    console.print("[green]Argus/file history and Windows logger access are disabled for this chat.[/green]")
+    console.print("[green]Argus tracked files, file history, and Windows logger access are disabled for this chat.[/green]")
 
 
 def _enable_local_sources(shell, chat: Chat) -> None:
-    confirm = pt_prompt("Enable access to local Argus/window history for this chat? (yes/no) > ").strip().casefold()
+    confirm = pt_prompt("Enable access to Argus tracked file contents and local Argus/window history for this chat? (yes/no) > ").strip().casefold()
     if confirm not in ("yes", "y"):
         shell.db.set_chat_local_sources(chat.id, [])
         chat.enabled_local_sources = []
@@ -783,9 +783,11 @@ def run_chat_session(shell: SentienceShell, chat_id_in_db: int, chat_display_id:
             continue
         if user_input.casefold() == "/enable":
             _enable_local_sources(shell, chat)
+            messages = shell.db.get_messages(chat.id)
             continue
         if user_input.casefold() == "/disable":
             _disable_local_sources(shell, chat)
+            messages = shell.db.get_messages(chat.id)
             continue
         if user_input.casefold() == "/add" or user_input.casefold().startswith("/add "):
             _add_chat_file(shell, chat, user_input[4:].strip())
